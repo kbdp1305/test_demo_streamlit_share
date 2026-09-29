@@ -1,0 +1,11 @@
+product_id,product_name,category,description
+P001,Working Capital Loan,Lending,Working capital / short-term financing
+P002,Investment Loan,Lending,Long-term business expansion
+P003,Business Current Account,Deposits,Business transaction account
+P004,Time Deposit,Deposits,Excess cash placement
+P005,Cash Management,Transaction Banking,Cash collection and payment management
+P006,Payroll Service,Transaction Banking,Employee payroll processing
+P007,Trade Finance,Trade,Import/export financing
+P008,Virtual Account,Transaction Banking,Automated collection and reconciliation
+P009,Corporate Credit Card,Cards,Business expense management
+P010,FX Service,Treasury,Foreign exchange transaction service
