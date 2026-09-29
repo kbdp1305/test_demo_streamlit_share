@@ -1,4 +1,15 @@
+from pathlib import Path
+import zipfile
+import shutil
+import os
 
+root = Path("/mnt/data/bni_customer_opportunity_streamlit")
+if root.exists():
+    shutil.rmtree(root)
+
+(root / "data").mkdir(parents=True)
+
+app_code = r'''
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -1334,3 +1345,52 @@ elif page == "Network Analysis":
         fig,
         use_container_width=True
     )
+'''
+
+requirements = """streamlit>=1.40,<2
+pandas>=2.0,<3
+numpy>=1.24,<3
+scikit-learn>=1.3,<2
+networkx>=3.0,<4
+plotly>=5.18,<7
+"""
+
+gitignore = """__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+.ipynb_checkpoints/
+.streamlit/secrets.toml
+"""
+
+readme = r'''# 🏦 BNI Customer Opportunity Intelligence
+
+A Streamlit demo for a Business Banking customer analytics use case.
+
+The application combines:
+
+- Customer 360
+- Transaction network analysis
+- Customer segmentation with K-Means
+- Product opportunity / propensity scoring
+- Product recommendation
+- Interactive customer network visualization
+
+## Repository structure
+
+```text
+bni-customer-opportunity/
+├── app.py
+├── requirements.txt
+├── .gitignore
+├── README.md
+└── data/
+    ├── customers.csv
+    ├── products.csv
+    ├── customer_products.csv
+    ├── transactions.csv
+    ├── monthly_customer_behavior.csv
+    ├── customer_feature_table.csv
+    └── future_product_targets.csv
