@@ -1364,33 +1364,3 @@ venv/
 .ipynb_checkpoints/
 .streamlit/secrets.toml
 """
-
-readme = r'''# 🏦 BNI Customer Opportunity Intelligence
-
-A Streamlit demo for a Business Banking customer analytics use case.
-
-The application combines:
-
-- Customer 360
-- Transaction network analysis
-- Customer segmentation with K-Means
-- Product opportunity / propensity scoring
-- Product recommendation
-- Interactive customer network visualization
-
-## Repository structure
-
-```text
-bni-customer-opportunity/
-├── app.py
-├── requirements.txt
-├── .gitignore
-├── README.md
-└── data/
-    ├── customers.csv
-    ├── products.csv
-    ├── customer_products.csv
-    ├── transactions.csv
-    ├── monthly_customer_behavior.csv
-    ├── customer_feature_table.csv
-    └── future_product_targets.csv
